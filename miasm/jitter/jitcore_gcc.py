@@ -71,7 +71,7 @@ class JitCore_Gcc(JitCore_Cc_Base):
                         get_python_inc(),
                         "..",
                         "libs",
-                        "python%d%d.lib".format(sys.version_info.major, sys.version_info.minor)
+                        "python%d%d.lib" % (sys.version_info.major, sys.version_info.minor)
                     )
                 )
                 cl = [
