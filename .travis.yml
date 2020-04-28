@@ -7,11 +7,11 @@ addons:
   apt:
     sources: ['llvm-toolchain-xenial-7', 'ubuntu-toolchain-r-test']
     packages:
-      - llvm-7.0
-      - llvm-7.0-dev
+      - llvm-7
+      - llvm-7-dev
       - g++-5
 env:
-  global: CXX=g++-5 LLVM_CONFIG=llvm-config-7.0
+  global: CXX=g++-5 LLVM_CONFIG=llvm-config-7
   matrix:
     - MIASM_TEST_EXTRA_ARG="-o regression -t long,python,llvm,gcc,z3,qemu,cparser"
     - MIASM_TEST_EXTRA_ARG="-o example -t long,python,llvm,gcc,z3,qemu,cparser"
